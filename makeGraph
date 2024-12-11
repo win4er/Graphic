@@ -1,0 +1,11 @@
+all : main.o graph.o
+	g++ main.o graph.o -o run_graph
+
+main.o : main.cpp
+	g++ -c main.cpp
+
+graph.o : graph.cpp
+	g++ -c graph.cpp
+
+clean :
+	rm -rf *.out *.exe run_graph
